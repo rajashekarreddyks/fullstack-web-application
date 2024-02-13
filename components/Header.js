@@ -1,5 +1,6 @@
 import {useSession} from 'next-auth/react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link';
 
 export default function Header(){
   const {data: session, status} = useSession()
@@ -25,12 +26,12 @@ export default function Header(){
             <>
             <div className=' mt-12 lg:mt-0'>
             <button>
-            <a href='/dashboard'> dashboard</a>
+            <Link href='/dashboard'> dashboard</Link>
             </button>
             </div>
             <div className=' mt-12 lg:-0 ml-2'>
             <button>
-                <a href='/api/auth/signout'>signout</a>
+                <Link href='/api/auth/signout'>signout</Link>
             </button>
             </div>
             </>
@@ -38,11 +39,11 @@ export default function Header(){
             <>
             <div className=' mt-12 lg:mt-0'>
             <button>
-                <a href='/api/auth/signin'> login</a>
+                <Link href='/api/auth/signin'> login</Link>
             </button>
             <div className=' mt-12 lg:mt-0 ml-2'>
             <button>
-                <a href='/api/auth/signin'> Get started</a>
+                <Link href='/api/auth/signin'> Get started</Link>
             </button>
 
             </div>
